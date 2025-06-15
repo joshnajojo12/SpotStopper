@@ -6,10 +6,15 @@
 
 body {
   font-family: sans-serif;
-  background: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url('https://cdn.builder.io/api/v1/image/assets/TEMP/af37f9135b3a72dff881ed107e144e84e1b48924?placeholderIfAbsent=true') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
-  
+  align-items: flex-start;
 }
 
 .main-container {
@@ -17,34 +22,29 @@ body {
   width: 100%;
   overflow: hidden;
   text-align: center;
+  background: transparent;
 }
 
 .background-wrapper {
   position: relative;
   width: 100%;
-  padding: 10% 12px;
-
-  
-}
-
-.background-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  padding: 10% 12px;
 }
 
 .card {
   position: relative;
-  padding: 45px 37px;
-  min-height:600px; /* Matches Figma spec */
+  padding: 40px 24px;
+  min-height: 600px;
+  margin-top: 40px;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  border-radius: 24px;
+  background-color: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .card-background {
@@ -88,7 +88,7 @@ body {
   width: 180px;
   height: 180px;
   object-fit: contain;
-  margin: 48px 0; /* Balanced vertical spacing */
+  margin: 48px 0;
 }
 
 .action-buttons {
@@ -103,7 +103,7 @@ body {
 
 .btn {
   width: 100%;
-  padding: 16px 64px;
+  padding: 16px 48px;
   border-radius: 40px;
   cursor: pointer;
   font-size: 18px;
@@ -119,4 +119,36 @@ body {
   background: transparent;
   color: black;
   border: 1px solid black;
+}
+
+/* 🔽 Mobile Responsiveness */
+@media (max-width: 480px) {
+  .card {
+    padding: 32px 20px;
+    min-height: auto;
+    margin-top: 32px;
+  }
+
+  .hero-image {
+    width: 140px;
+    height: 140px;
+    margin: 36px 0;
+  }
+
+  .welcome-header h1 {
+    font-size: 22px;
+  }
+
+  .welcome-header p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 14px 24px;
+  }
+
+  .action-buttons {
+    min-height: auto;
+  }
 }
