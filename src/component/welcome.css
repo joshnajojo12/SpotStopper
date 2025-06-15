@@ -1,163 +1,93 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-  background: url('https://cdn.builder.io/api/v1/image/assets/TEMP/af37f9135b3a72dff881ed107e144e84e1b48924?placeholderIfAbsent=true') no-repeat center center fixed;
-  background-size: cover;
+/* Full screen gradient background */
+.welcome-background {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  background: linear-gradient(to bottom, #a855f7, #3b82f6); /* purple to blue */
+  height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
-.main-container {
-  max-width: 500px;
+/* White card */
+.welcome-card {
+  background: white;
+  border-radius: 40px;
+  max-width: 388px;
   width: 100%;
-  overflow: hidden;
-  text-align: center;
-  background: transparent;
-}
-
-.background-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 10% 12px;
-}
-
-.card {
-  position: relative;
-  padding: 45px 37px;
-  margin-top: 40px;
-  min-height: 600px;
-  z-index: 1;
+  padding: 17px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  border-radius: 24px;
-  background-color: white;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  gap: 24px; /* vertical spacing between elements */
 }
 
-.card-background {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  border-radius: 24px;
-}
-
-.welcome-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-}
-
-.welcome-header .circle {
+/* Top circular dot */
+.welcome-dot {
   width: 48px;
   height: 48px;
-  background: #d6d3d1;
+  background-color: #d1d5db; /* Tailwind gray-300 */
   border-radius: 50%;
 }
 
-.welcome-header h1 {
-  margin-top: 24px;
-  font-size: 28px;
-  font-weight: 600;
+/* Headline and subtext */
+.welcome-text {
+  text-align: center;
 }
 
-.welcome-header p {
-  margin-top: 14px;
-  font-size: 16px;
-  font-weight: 300;
-  color: #777;
+.welcome-text h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
 }
 
-.hero-image {
+.welcome-text p {
+  font-size: 14px;
+  color: #6b7280; /* Tailwind gray-500 */
+  margin: 4px 0 0 0;
+}
+
+/* Tire icon placeholder */
+.welcome-icon {
   width: 180px;
   height: 180px;
-  object-fit: contain;
-  margin: 48px 0;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
 }
 
-.action-buttons {
+/* Buttons */
+.welcome-buttons {
   width: 100%;
-  min-height: 141px;
-  font-size: 20px;
-  font-weight: 500;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
-.btn {
+.btn-primary {
   width: 100%;
-  padding: 16px 64px;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.black-btn {
-  background-color: black;
-  color: white;
+  background: #000;
+  color: #fff;
   border: none;
+  padding: 12px;
+  border-radius: 9999px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.outline-btn {
+.btn-outline {
+  width: 100%;
   background: transparent;
-  color: black;
-  border: 1px solid black;
-}
-
-/* ✅ Responsive Adjustments for Mobile */
-@media (max-width: 480px) {
-  .card {
-    padding: 32px 20px;
-    margin-top: 24px;
-    min-height: auto;
-    width: 100%;
-    border-radius: 20px;
-  }
-
-  .welcome-header .circle {
-    width: 40px;
-    height: 40px;
-  }
-
-  .welcome-header h1 {
-    font-size: 22px;
-    margin-top: 20px;
-  }
-
-  .welcome-header p {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-
-  .hero-image {
-    width: 140px;
-    height: 140px;
-    margin: 32px 0;
-  }
-
-  .action-buttons {
-    gap: 12px;
-  }
-
-  .btn {
-    font-size: 16px;
-    padding: 14px 20px;
-  }
+  color: #000;
+  border: 1px solid #000;
+  padding: 12px;
+  border-radius: 9999px;
+  font-size: 14px;
+  cursor: pointer;
 }
