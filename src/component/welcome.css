@@ -34,9 +34,9 @@ body {
 
 .card {
   position: relative;
-  padding: 40px 24px;
-  min-height: 600px;
+  padding: 45px 37px;
   margin-top: 40px;
+  min-height: 600px;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -103,7 +103,7 @@ body {
 
 .btn {
   width: 100%;
-  padding: 16px 48px;
+  padding: 16px 64px;
   border-radius: 40px;
   cursor: pointer;
   font-size: 18px;
@@ -121,34 +121,43 @@ body {
   border: 1px solid black;
 }
 
-/* 🔽 Mobile Responsiveness */
+/* ✅ Responsive Adjustments for Mobile */
 @media (max-width: 480px) {
   .card {
     padding: 32px 20px;
+    margin-top: 24px;
     min-height: auto;
-    margin-top: 32px;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .welcome-header .circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .welcome-header h1 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .welcome-header p {
+    font-size: 14px;
+    margin-top: 10px;
   }
 
   .hero-image {
     width: 140px;
     height: 140px;
-    margin: 36px 0;
+    margin: 32px 0;
   }
 
-  .welcome-header h1 {
-    font-size: 22px;
-  }
-
-  .welcome-header p {
-    font-size: 14px;
+  .action-buttons {
+    gap: 12px;
   }
 
   .btn {
     font-size: 16px;
-    padding: 14px 24px;
-  }
-
-  .action-buttons {
-    min-height: auto;
+    padding: 14px 20px;
   }
 }
