@@ -1,16 +1,12 @@
-
-import './App.css'
-import VehicleDetails from './component/Vehicle_details'
+import './App.css';
+import Welcome from './component/welcome'; // ✅ make sure the filename matches exactly
 
 function App() {
-  
-
   return (
     <>
-      <VehicleDetails />
-    
+      <Welcome />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
