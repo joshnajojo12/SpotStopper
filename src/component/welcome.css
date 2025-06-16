@@ -26,9 +26,9 @@ body {
 
 .card {
   position: relative;
-  width: calc(100% - 20px); /* 10px left and right */
+  width: calc(100% - 14px); /* 7px margin on left and right */
   padding: 47px 28px;
-  margin: 36px auto 24px auto; /* reduced bottom margin for visible background */
+  margin: 36px auto 20px auto; /* top, sides, bottom */
   border-radius: 28px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -115,9 +115,9 @@ body {
 /* 🔽 Mobile Responsiveness */
 @media (max-width: 480px) {
   .card {
-    margin: 36px 10px 20px 10px; /* top 36px, bottom 20px */
-    width: calc(100% - 20px); /* slightly wider than before */
-    min-height: calc(100vh - 56px); /* keeps height but allows bottom gap */
+    margin: 36px 7px 20px 7px;
+    width: calc(100% - 14px);
+    min-height: calc(100vh - 56px); /* Ensure good height fill */
   }
 
   .hero-image {
