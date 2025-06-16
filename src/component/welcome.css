@@ -25,11 +25,10 @@ body {
 }
 
 .card {
-   margin: 0 9px; /* Equal spacing on left and right */
-  margin-top: auto;
-  margin-bottom: 47px; /* Same as the bottom spacing in your screenshot */
-  width: calc(100% - 18px); /* Avoid overflow due to side margins */
+    position: relative;
+  width: 388px; /* or whatever was working for you before */
   padding: 47px 28px;
+  margin: 240px auto; /* TOP & BOTTOM spacing equal, centered horizontally */
   border-radius: 28px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
