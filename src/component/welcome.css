@@ -27,9 +27,9 @@ body {
 
 .card {
   position: relative;
-  width: calc(100% - 32px); /* Wider with small side gap */
+  width: calc(100% - 24px); /* Leaves 12px space on both left and right */
   padding: 47px 28px;
-  margin: 20px auto; /* Equal top and bottom space */
+  margin: 48px auto;
   border-radius: 28px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -38,6 +38,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 
 .card-background {
   position: absolute;
