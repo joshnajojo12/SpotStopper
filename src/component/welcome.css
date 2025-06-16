@@ -9,7 +9,7 @@ body {
   font-family: sans-serif;
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* lock the screen  scroll */
+  overflow: hidden; /* lock the screen scroll */
 }
 
 body {
@@ -19,21 +19,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0; 
+  padding: 0;
 }
 
 .main-container {
   width: 100%;
   max-width: 428px;
   height: 100%;
+  padding: 16px; /* Add padding to show background around the card */
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .card {
+  
   width: 320px;
-  height: 720px;
+  height: 700px; /* Base height */
   padding: 40px 24px;
   border-radius: 28px;
   background-color: white;
@@ -44,6 +47,16 @@ body {
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 428px) {
+  .main-container {
+    padding: 12px; /* smaller padding on very small screens */
+  }
+
+  .card {
+    height: 800px; /* smaller height on mobile to avoid overflow */
+  }
 }
 
 .card-background {
@@ -119,10 +132,4 @@ body {
   background: transparent;
   color: black;
   border: 1px solid black;
-}
-@media (max-width: 428px) {
-  .card {
-    height: 840px;
-    width: 350px;
-  }
 }
