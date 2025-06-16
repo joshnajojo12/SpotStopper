@@ -13,7 +13,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: auto;
+  padding: 20px 0; /* Ensures top and bottom spacing */
 }
 
 .main-container {
@@ -26,9 +27,9 @@ body {
 
 .card {
   position: relative;
-  width: calc(100% - 14px); /* 7px margin on left and right */
+  width: calc(100% - 32px); /* Wider with small side gap */
   padding: 47px 28px;
-  margin: 36px auto 20px auto; /* top, sides, bottom */
+  margin: 20px auto; /* Equal top and bottom space */
   border-radius: 28px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -66,6 +67,7 @@ body {
   margin-top: 24px;
   font-size: 28px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .welcome-header p {
@@ -112,12 +114,11 @@ body {
   border: 1px solid black;
 }
 
-/* 🔽 Mobile Responsiveness */
+/* Mobile responsiveness */
 @media (max-width: 480px) {
   .card {
-    margin: 36px 7px 20px 7px;
-    width: calc(100% - 14px);
-    min-height: calc(100vh - 56px); /* Ensure good height fill */
+    margin: 20px auto; /* equal top and bottom gap */
+    width: calc(100% - 32px); /* maintain equal spacing on both sides */
   }
 
   .hero-image {
