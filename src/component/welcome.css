@@ -13,23 +13,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: auto;
-  padding: 20px 0; /* Ensures top and bottom spacing */
+  overflow: hidden;
+  padding: 20px 12px;
 }
 
 .main-container {
   width: 100%;
-  max-width: 500px;
+  max-width: 428px;
   text-align: center;
   background: transparent;
-  padding: 0 10px;
 }
 
 .card {
   position: relative;
-  width: calc(100% - 24px); /* Leaves 12px space on both left and right */
+  width: 100%;
   padding: 47px 28px;
-  margin: 48px auto;
   border-radius: 28px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -38,7 +36,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 
 .card-background {
   position: absolute;
@@ -76,6 +73,7 @@ body {
   font-size: 16px;
   font-weight: 300;
   color: #777;
+  text-align: center;
 }
 
 .hero-image {
@@ -87,12 +85,11 @@ body {
 
 .action-buttons {
   width: 100%;
-  min-height: 141px;
-  font-size: 20px;
-  font-weight: 500;
   display: flex;
   flex-direction: column;
   gap: 14px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .btn {
@@ -115,11 +112,16 @@ body {
   border: 1px solid black;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 480px) {
+  body {
+    padding: 16px 12px;
+    overflow-y: auto;
+  }
+
   .card {
-    margin: 20px auto; /* equal top and bottom gap */
-    width: calc(100% - 32px); /* maintain equal spacing on both sides */
+    width: 100%;
+    padding: 40px 24px;
+    margin: 0 auto;
   }
 
   .hero-image {
