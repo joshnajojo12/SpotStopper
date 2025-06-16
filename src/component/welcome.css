@@ -21,15 +21,14 @@ body {
   max-width: 500px;
   text-align: center;
   background: transparent;
-  padding: 0 10px; /* ensure spacing on small screens */
+  padding: 0 10px;
 }
 
 .card {
   position: relative;
-  width: calc(100% - 24px); /* fallback default width with 12px gap on sides */
+  width: calc(100% - 20px); /* 10px left and right */
   padding: 47px 28px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 36px auto 24px auto; /* reduced bottom margin for visible background */
   border-radius: 28px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -116,12 +115,9 @@ body {
 /* 🔽 Mobile Responsiveness */
 @media (max-width: 480px) {
   .card {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: calc(100% - 20px); /* shows background on left/right */
-    min-height: calc(100vh - 80px); /* shows background on top/bottom */
+    margin: 36px 10px 20px 10px; /* top 36px, bottom 20px */
+    width: calc(100% - 20px); /* slightly wider than before */
+    min-height: calc(100vh - 56px); /* keeps height but allows bottom gap */
   }
 
   .hero-image {
