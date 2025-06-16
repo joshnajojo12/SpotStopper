@@ -17,6 +17,10 @@ body {
 }
 
 .card {
+  margin-top: 38px;
+  margin-bottom: 38px;
+  margin-left: 15px;
+  margin-right: 15px;
   position: relative;
   width: 100%;
   padding: 47px 28px;
@@ -113,14 +117,15 @@ body {
   border: 1px solid black;
 }
 
-/* 🔽 Mobile Responsiveness */
 @media (max-width: 480px) {
   .card {
-   margin-top: 48px;
-    margin-bottom: 48px;
-    margin-left: 17px;
-    margin-right: 17px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 11px;
+    margin-right: 11px;
   }
+}
+
 
   .hero-image {
     width: 140px;
@@ -144,4 +149,4 @@ body {
   .action-buttons {
     min-height: auto;
   }
-}
+
