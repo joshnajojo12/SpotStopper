@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0; /* no padding to prevent offset */
+  padding: 0; 
 }
 
 .main-container {
