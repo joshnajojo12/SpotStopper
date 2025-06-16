@@ -6,16 +6,17 @@
 
 body {
   font-family: sans-serif;
-  height: 100vh;
+  min-height: 100vh; /* changed from height: 100vh */
   width: 100vw;
   background: url('https://cdn.builder.io/api/v1/image/assets/TEMP/af37f9135b3a72dff881ed107e144e84e1b48924?placeholderIfAbsent=true') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: auto; /* allow natural content growth */
   padding: 20px 12px;
 }
+
 
 .main-container {
   width: 100%;
@@ -27,7 +28,7 @@ body {
 .card {
   position: relative;
   width: 100%;
-  padding: 50px 30px;
+  padding: 50px 50px;
   border-radius: 28px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
