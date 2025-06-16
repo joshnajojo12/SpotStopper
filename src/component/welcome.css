@@ -16,14 +16,20 @@ body {
   overflow: hidden;
 }
 
-.card {
-  margin-top: 38px;
-  margin-bottom: 38px;
-  margin-left: 15px;
-  margin-right: 15px;
-  position: relative;
+.main-container {
   width: 100%;
+  max-width: 500px;
+  text-align: center;
+  background: transparent;
+  padding: 0 10px; /* ensure spacing on small screens */
+}
+
+.card {
+  position: relative;
+  width: calc(100% - 24px); /* fallback default width with 12px gap on sides */
   padding: 47px 28px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 28px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -31,17 +37,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 0; /* REMOVE margin, use container padding */
 }
-
-.main-container {
-  width: 100%;
-  max-width: 500px;
-  padding: 48px 17px;
-  box-sizing: border-box;
-}
-
-
 
 .card-background {
   position: absolute;
@@ -117,15 +113,16 @@ body {
   border: 1px solid black;
 }
 
+/* 🔽 Mobile Responsiveness */
 @media (max-width: 480px) {
   .card {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    margin-left: 11px;
-    margin-right: 11px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 20px); /* shows background on left/right */
+    min-height: calc(100vh - 80px); /* shows background on top/bottom */
   }
-}
-
 
   .hero-image {
     width: 140px;
@@ -149,4 +146,4 @@ body {
   .action-buttons {
     min-height: auto;
   }
-
+}
