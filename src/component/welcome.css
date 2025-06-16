@@ -13,19 +13,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden; /* Prevents horizontal scroll */
+  overflow: hidden;
 }
 
 .main-container {
   width: 100%;
   max-width: 500px;
   text-align: center;
-  padding: 0 10px; /* Safe padding for mobile sides */
+  background: transparent;
+  padding: 0 10px; /* ensure spacing on small screens */
 }
 
 .card {
+  position: relative;
   width: 100%;
-  padding: 44px 24px; /* Slightly bigger card */
+  padding: 47px 28px;
+  margin-left: 10px;
+  margin-right: 10px;
   border-radius: 28px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -42,7 +46,7 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  border-radius: 24px;
+  border-radius: 28px;
 }
 
 .welcome-header {
@@ -81,6 +85,7 @@ body {
 
 .action-buttons {
   width: 100%;
+  min-height: 141px;
   font-size: 20px;
   font-weight: 500;
   display: flex;
@@ -111,13 +116,15 @@ body {
 /* 🔽 Mobile Responsiveness */
 @media (max-width: 480px) {
   .card {
-    padding: 36px 20px;
+    padding: 40px 24px;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 24px;
   }
 
   .hero-image {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     margin: 36px 0;
   }
 
@@ -132,5 +139,9 @@ body {
   .btn {
     font-size: 16px;
     padding: 14px 24px;
+  }
+
+  .action-buttons {
+    min-height: auto;
   }
 }
