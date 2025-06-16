@@ -25,10 +25,11 @@ body {
 }
 
 .card {
-    position: relative;
-  width: 388px; /* or whatever was working for you before */
+  position: relative;
+  width: calc(100% - 24px); /* 12px on each side */
   padding: 47px 28px;
-  margin: 240px auto; /* TOP & BOTTOM spacing equal, centered horizontally */
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 28px;
   background-color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -37,6 +38,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 
 
 .card-background {
