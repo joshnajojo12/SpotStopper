@@ -55,7 +55,8 @@ body {
   }
 
   .card {
-    height: 800px; /* smaller height on mobile to avoid overflow */
+    height: 650px;
+    margin-top: -200px; /* smaller height on mobile to avoid overflow */
   }
 }
 
